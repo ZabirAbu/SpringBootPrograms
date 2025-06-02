@@ -1,0 +1,37 @@
+hash,intro,Parent,parents,parent,pf1,pf2,pf3,Child,children,child,cf1,cf2,cf3,v1,v2,v3,cf4,low,high
+1,Your personal task is to develop a system for teams and their players.,Team,teams,team,id,name,league,Player,players,player,name,nationality,position,Defence,Attack,Goalkeeper,age,18,90
+2,Your personal task is to develop a system for teams and their players.,Team,teams,team,id,name,location,Player,players,player,name,country,position,Defence,Attack,Goalkeeper,shirt,1,10
+3,Your personal task is to develop a system for teams and their players.,Team,teams,team,id,league,manager,Player,players,player,name,email,position,First Team,Substitute,On Loan,goals,0,70
+4,Your personal task is to develop a system for teams and their players.,Team,teams,team,id,location,league,Player,players,player,name,description,position,First Team,Substitute,On Loan,age,18,100
+5,Your personal task is to develop a system for cafes and their cakes.,Cafe,cafes,cafe,id,name,location,Cake,cakes,cake,name,description,flavour,Victoria Sponge,Chocolate Cake,Carrot Cake,stock,0,50
+6,Your personal task is to develop a system for cafes and their cakes.,Cafe,cafes,cafe,id,name,address,Cake,cakes,cake,name,description,ingredients,Sugar,Butter,Flour,amount,0,15
+7,Your personal task is to develop a system for cafes and their cakes.,Cafe,cafes,cafe,id,chain,branch,Cake,cakes,cake,description,allergies,filling,Vanilla,Chocolate,Strawberry,stock,0,35
+8,Your personal task is to develop a system for cafes and their cakes.,Cafe,cafes,cafe,id,owner,address,Cake,cakes,cake,description,recommendation,filling,Cherry,Lemon,Raspberry,amount,0,40
+9,Your personal task is to develop a system for zoos and their animals.,Zoo,zoos,zoo,id,name,address,Animal,animals,animal,name,species,exhibit,Aquarium,Forest,Farmyard,height,5,300
+10,Your personal task is to develop a system for zoos and their animals.,Zoo,zoos,zoo,id,name,website,Animal,animals,animal,name,food,diet,Meat,Fruit,Fish,weight,20,550
+11,Your personal task is to develop a system for zoos and their animals.,Zoo,zoos,zoo,id,location,description,Animal,animals,animal,name,description,diet,Meat,Fruit,Fish,age,0,150
+12,Your personal task is to develop a system for zoos and their animals.,Zoo,zoos,zoo,id,location,website,Animal,animals,animal,name,country,exhibit,Aquarium,Forest,Farmyard,height,4,270
+13,Your personal task is to develop a system for galleries and their artworks.,Gallery,galleries,gallery,id,name,location,Artwork,artworks,artwork,name,artist,genre,Classical,Abstract,Sculpture,price,1,1000
+14,Your personal task is to develop a system for galleries and their artworks.,Gallery,galleries,gallery,id,name,description,Artwork,artworks,artwork,title,artist,genre,Abstract,Art Deco,Impressionist,size,5,125
+15,Your personal task is to develop a system for galleries and their artworks.,Gallery,galleries,gallery,id,name,website,Artwork,artworks,artwork,title,catalogue,medium,Watercolour,Oil,Acrylic,price,21,500
+16,Your personal task is to develop a system for galleries and their artworks.,Gallery,galleries,gallery,id,director,location,Artwork,artworks,artwork,name,catalogue,medium,Watercolour,Ink,Pastel,size,32,161
+17,Your personal task is to develop a system for cinemas and their films.,Cinema,cinemas,cinema,id,name,location,Film,films,film,name,director,genre,Comedy,Mystery,Adventure,runtime,60,150
+18,Your personal task is to develop a system for cinemas and their films.,Cinema,cinemas,cinema,id,name,address,Film,films,film,name,producer,genre,Comedy,Mystery,Adventure,actors,3,760
+19,Your personal task is to develop a system for cinemas and their films.,Cinema,cinemas,cinema,id,name,architect,Film,films,film,director,editor,language,English,German,French,runtime,45,130
+20,Your personal task is to develop a system for cinemas and their films.,Cinema,cinemas,cinema,id,owner,architect,Film,films,film,producer,distributor,language,English,German,French,actors,5,184
+21,Your personal task is to develop a system for gardens and their flowers.,Garden,gardens,garden,id,name,location,Flower,flowers,flower,name,genus,exhibit,Alpine,Orangery,Lakeside,height,3,24
+22,Your personal task is to develop a system for gardens and their flowers.,Garden,gardens,garden,id,name,website,Flower,flowers,flower,name,species,exhibit,Alpine,Orangery,Lakeside,varieties,1,72
+23,Your personal task is to develop a system for gardens and their flowers.,Garden,gardens,garden,id,location,website,Flower,flowers,flower,species,country,petals,Pink,Orange,Red,height,5,15
+24,Your personal task is to develop a system for gardens and their flowers.,Garden,gardens,garden,id,address,type,Flower,flowers,flower,name,country,petals,Pink,Orange,Red,varieties,1,30
+25,Your personal task is to develop a system for dealerships and their cars.,Dealership,dealerships,dealership,id,name,owner,Car,cars,car,name,manufacturer,colour,Blue,Black,Silver,height,130,200
+26,Your personal task is to develop a system for dealerships and their cars.,Dealership,dealerships,dealership,id,name,address,Car,cars,car,name,model,colour,Red,Silver,Blue,width,155,190
+27,Your personal task is to develop a system for dealerships and their cars.,Dealership,dealerships,dealership,id,owner,location,Car,cars,car,description,engine,style,Convertible,Hatchback,Van,speed,0,130
+28,Your personal task is to develop a system for dealerships and their cars.,Dealership,dealerships,dealership,id,owner,website,Car,cars,car,manufacturer,designer,style,Convertible,Hatchback,Van,height,120,252
+29,Your personal task is to develop a system for radio companies and their stations.,Radio,radios,radio,id,name,format,Station,stations,station,host,producer,genre,Pop music,Rock music,Classical music,frequency,90,130
+30,Your personal task is to develop a system for radio companies and their stations.,Radio,radios,radio,id,title,owner,Station,stations,station,presenter,format,genre,Folk music,Jazz,Musical theatre,frequency,701,793
+31,Your personal task is to develop a system for radio companies and their stations.,Radio,radios,radio,id,name,website,Station,stations,station,host,email,genre,Folk music,Jazz,Musical theatre,runtime,15,120
+32,Your personal task is to develop a system for radio companies and their stations.,Radio,radios,radio,id,name,country,Station,stations,station,presenter,producer,genre,Pop music,Rock music,Classical music,runtime,60,115
+33,Your personal task is to develop a system for orchestras and their musicians.,Orchestra,orchestras,orchestra,id,name,location,Musician,musicians,musician,name,email,instrument,Oboe,Flute,Clarinet,performances,0,500
+34,Your personal task is to develop a system for orchestras and their musicians.,Orchestra,orchestras,orchestra,id,name,conductor,Musician,musicians,musician,name,score,instrument,Trumpet,Tuba,Trombone,grade,0,8
+35,Your personal task is to develop a system for orchestras and their musicians.,Orchestra,orchestras,orchestra,id,location,website,Musician,musicians,musician,firstName,surname,instrument,Drum,Xylophone,Piano,performances,30,1000
+36,Your personal task is to develop a system for orchestras and their musicians.,Orchestra,orchestras,orchestra,id,name,theatre,Musician,musicians,musician,firstName,surname,instrument,Cello,Violin,Viola,grade,5,9
