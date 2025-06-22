@@ -1,0 +1,1020 @@
+{
+	"info": {
+		"_postman_id": "2235d6a2-b2a5-4db0-bd59-f5ccfd8d617c",
+		"name": "part1",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "25964021"
+	},
+	"item": [
+		{
+			"name": "GET /convenors (200)",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/convenors",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"convenors"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GET /convenors (404)",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/convenor",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"convenor"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "POST /convenors (201)",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\": \"Luke Smith\",\r\n    \"position\": \"GTA\",\r\n    \"modules\": [\r\n        {\r\n            \"code\": \"CO2103\",\r\n            \"title\": \"Software Architecture\",\r\n            \"level\": 2,\r\n            \"optional\": false,\r\n            \"sessions\": [\r\n                {\r\n                    \"id\": 1,\r\n                    \"topic\": \"REST APIs\",\r\n                    \"datetime\": \"2022-02-25T12:00:00.000+00:00\",\r\n                    \"duration\": 2\r\n                }\r\n            ]\r\n        }\r\n    ]\r\n}"
+				},
+				"url": {
+					"raw": "localhost:8080/convenors",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"convenors"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "POST /convenors (409)",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"id\": 5,\r\n    \"name\": \"Luke Smith\",\r\n    \"position\": \"GTA\",\r\n    \"modules\": [\r\n        {\r\n            \"code\": \"CO2103\",\r\n            \"title\": \"Software Architecture\",\r\n            \"level\": 2,\r\n            \"optional\": false,\r\n            \"sessions\": [\r\n                {\r\n                    \"id\": 1,\r\n                    \"topic\": \"REST APIs\",\r\n                    \"datetime\": \"2022-02-25T12:00:00.000+00:00\",\r\n                    \"duration\": 2\r\n                }\r\n            ]\r\n        }\r\n    ]\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/convenors",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"convenors"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GET /convenors/{id} (200)",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/convenors/3",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"convenors",
+						"3"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GET /convenors/{id} (404)",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/convenors/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"convenors",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "PUT /convenors/{id} (200)",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"id\":3,\r\n    \"name\":\"Tom Walker\",\r\n    \"position\":\"GTA\"\r\n    \r\n}"
+				},
+				"url": {
+					"raw": "http://localhost:8080/convenors/3",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"convenors",
+						"3"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "PUT /convenors/{id} (404)",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"id\":1,\r\n    \"name\":\"Tom Walker\",\r\n    \"position\":\"GTA\"\r\n    \r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/convenors/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"convenors",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "DELETE /convenors/{id} (500)",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/convenors/3",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"convenors",
+						"3"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "DELETE /convenors/{id} (404)",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/convenors/6",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"convenors",
+						"6"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GET /convenors/{id}/modules (200)",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/convenors/3/modules",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"convenors",
+						"3",
+						"modules"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GET /convenors/{id}/modules (404)",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/convenors/2/modules",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"convenors",
+						"2",
+						"modules"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GET /modules (200)",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "http://localhost:8080/modules",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"modules"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GET /modules (404)",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/module",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"module"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "POST /modules (201)",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"code\": \"CO3074\",\r\n  \"title\": \"Cyber Security\",\r\n  \"level\": 3,\r\n  \"optional\": false,\r\n  \"sessions\": [\r\n    {\r\n      \"topic\": \"SQL Injection\",\r\n      \"datetime\": \"2023-05-01T09:00:00.000+00:00\",\r\n      \"duration\": 3\r\n    }\r\n  ]\r\n}\r\n"
+				},
+				"url": {
+					"raw": "http://localhost:8080/modules",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"modules"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "POST /modules (409)",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"code\": \"CO3074\",\r\n  \"title\": \"Cyber Security\",\r\n  \"level\": 3,\r\n  \"optional\": false,\r\n  \"sessions\": [\r\n    {\r\n      \"topic\": \"SQL Injection\",\r\n      \"datetime\": \"2023-05-01T09:00:00.000+00:00\",\r\n      \"duration\": 3\r\n    }\r\n  ]\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/modules",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"modules"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GET /modules/{code} (200)",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/modules/CO2103",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"modules",
+						"CO2103"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GET /modules/{code} (404)",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/modules/CO2101",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"modules",
+						"CO2101"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "PATCH /modules/{code} (200)",
+			"request": {
+				"method": "PATCH",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"title\": \"Advanced Cyber Security\"\r\n}"
+				},
+				"url": {
+					"raw": "http://localhost:8080/modules/CO3074",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"modules",
+						"CO3074"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "PATCH /modules/{code} (404)",
+			"request": {
+				"method": "PATCH",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"title\": \"Advanced Cyber Security\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/modules/CO3070",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"modules",
+						"CO3070"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "DELETE /modules/{code} (200)",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/modules/CO3074",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"modules",
+						"CO3074"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "DELETE /modules/{code} (404)",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/modules/CO3074",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"modules",
+						"CO3074"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GET /modules/{code}/sessions (200)",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/modules/CO2103/sessions",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"modules",
+						"CO2103",
+						"sessions"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GET /modules/{code}/sessions (404)",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/modules/CO2101/sessions",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"modules",
+						"CO2101",
+						"sessions"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "POST /modules/{code}/sessions/{id} (405)",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"id\": 2,\r\n    \"topic\": \"RESTful APIs\",\r\n    \"datetime\": \"2023-05-05T10:00:00\",\r\n    \"duration\": 90\r\n}\r\n\r\n"
+				},
+				"url": {
+					"raw": "http://localhost:8080/modules/CO2103/sessions/2",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"modules",
+						"CO2103",
+						"sessions",
+						"2"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GET /modules/{code}/sessions/{id} (200)",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/modules/CO2103/sessions/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"modules",
+						"CO2103",
+						"sessions",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GET /modules/{code}/sessions/{id} (404)",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/modules/CO2103/sessions/5",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"modules",
+						"CO2103",
+						"sessions",
+						"5"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "PUT /modules/{code}/sessions/{id} (200)",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"topic\": \"Advanced REST APIs\",\r\n    \"datetime\": \"2022-02-25T12:00:00.000+00:00\",\r\n    \"duration\": 4\r\n}\r\n"
+				},
+				"url": {
+					"raw": "http://localhost:8080/modules/CO2103/sessions/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"modules",
+						"CO2103",
+						"sessions",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "PUT /modules/{code}/sessions/{id} (400)",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/modules/CO2101/sessions/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"modules",
+						"CO2101",
+						"sessions",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "PATCH /modules/{code}/sessions/{id} (200)",
+			"request": {
+				"method": "PATCH",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"topic\": \"APIs\"\r\n}\r\n"
+				},
+				"url": {
+					"raw": "http://localhost:8080/modules/CO2103/sessions/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"modules",
+						"CO2103",
+						"sessions",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "PATCH /modules/{code}/sessions/{id} (400)",
+			"request": {
+				"method": "PATCH",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/modules/CO2103/sessions/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"modules",
+						"CO2103",
+						"sessions",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "DELETE /modules/{code}/sessions/{id} (200)",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/modules/CO2103/sessions/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"modules",
+						"CO2103",
+						"sessions",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "DELETE /modules/{code}/sessions/{id} (404)",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/modules/CO2103/sessions/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"modules",
+						"CO2103",
+						"sessions",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "DELETE /sessions (200)",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/sessions",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"sessions"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "DELETE /sessions (400)",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/sessions",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"sessions"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GET /sessions?convenor={id} (200)",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/sessions?convenor=4",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"sessions"
+					],
+					"query": [
+						{
+							"key": "convenor",
+							"value": "4"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GET /sessions?convenor={id} (204)",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/sessions?convenor=1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"sessions"
+					],
+					"query": [
+						{
+							"key": "convenor",
+							"value": "1"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GET /sessions?module={code} (200)",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/sessions?module=CO2103",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"sessions"
+					],
+					"query": [
+						{
+							"key": "module",
+							"value": "CO2103"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GET /sessions?module={code} (204)",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/sessions?module=CO2101",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"sessions"
+					],
+					"query": [
+						{
+							"key": "module",
+							"value": "CO2101"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GET /sessions?convenor={id}&module={code}",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/sessions?convenor=4&module=CO3095",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"sessions"
+					],
+					"query": [
+						{
+							"key": "convenor",
+							"value": "4"
+						},
+						{
+							"key": "module",
+							"value": "CO3095"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GET /sessions?convenor={id}&module={code} (404)",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/sessions?convenor=1&module=CO3095",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"sessions"
+					],
+					"query": [
+						{
+							"key": "convenor",
+							"value": "1"
+						},
+						{
+							"key": "module",
+							"value": "CO3095"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GET /sessions?convenor={id}&module={code} (404)",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/sessions?convenor=4&module=CO2014",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"sessions"
+					],
+					"query": [
+						{
+							"key": "convenor",
+							"value": "4"
+						},
+						{
+							"key": "module",
+							"value": "CO2014"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
